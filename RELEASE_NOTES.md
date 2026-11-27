@@ -91,5 +91,3 @@
 - 修改：`User`、`UserRepo`、`ApiController`、`application.yml`、`ApiClient`、`SessionManager`、`DBHelper`、`LoginActivity`、`RegisterActivity`、`MainActivity`、`AndroidManifest.xml`
 
 ---
-
-**作者：** 刘文彬 · 计算机241班 · 学号 202402018 · 湖北汽车工业学院
