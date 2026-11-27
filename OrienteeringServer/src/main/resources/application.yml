@@ -1,0 +1,23 @@
+server:
+  port: 8090
+  error:
+    # 永远不要把堆栈返回给客户端，避免泄露内部实现
+    include-stacktrace: never
+    include-message: never
+
+spring:
+  datasource:
+    # H2 文件数据库：数据存在 ./ori-data.mv.db，重启不丢
+    url: jdbc:h2:file:./ori-data
+    driver-class-name: org.h2.Driver
+    username: sa
+    # 数据库口令走环境变量，代码里不写死；本地首次启动可用默认空口令
+    password: ${ORI_DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  # 关闭 H2 Web 控制台（默认就没开，这里显式声明，防止误开启）
+  h2:
+    console:
+      enabled: false

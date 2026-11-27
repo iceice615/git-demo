@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="注册新账号"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@android:color/white"
+            android:hint="用户名 / 学号（至少 2 个字符）"
+            android:inputType="text"
+            android:padding="14dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etRealName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/white"
+            android:hint="姓名（选填，登录后也可在「我的」里补填）"
+            android:inputType="textPersonName"
+            android:padding="14dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etClazz"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/white"
+            android:hint="班级（选填，如：计算机241）"
+            android:inputType="text"
+            android:padding="14dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/white"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/white"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:text="注 册"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</ScrollView>

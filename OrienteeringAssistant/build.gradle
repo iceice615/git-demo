@@ -1,0 +1,4 @@
+// 根项目构建脚本：只声明 Android Gradle 插件版本
+plugins {
+    id 'com.android.application' version '9.3.0' apply false
+}

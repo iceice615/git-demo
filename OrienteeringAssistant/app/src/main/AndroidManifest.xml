@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 第一阶段：扫码打卡需要相机 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 第二阶段预留：GPS 定位 / 轨迹记录 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 第二阶段预留：NFC 打卡 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 前台服务：比赛中持续记录 GPS 轨迹 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.nfc" android:required="false" />
+
+    <application
+        android:name=".OrienteeringApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="false"
+        android:theme="@style/Theme.Orienteering">
+
+        <!-- 百度地图 AK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="YOUR_BAIDU_MAP_AK" />
+
+        <!-- 比赛轨迹记录前台服务 -->
+        <service
+            android:name=".service.TrackService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <!-- 登录页：APP 启动入口 -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".CompetitionListActivity" android:exported="false" />
+        <activity android:name=".CompetitionEditActivity" android:exported="false" />
+        <activity android:name=".CompetitionFormActivity" android:exported="false" />
+        <activity android:name=".CheckpointListActivity" android:exported="false" />
+        <activity android:name=".CheckpointEditActivity" android:exported="false" />
+        <activity android:name=".RaceSelectActivity" android:exported="false" />
+        <!-- 比赛页锁定竖屏，避免运动中转动手机导致界面重排误触 -->
+        <activity
+            android:name=".RaceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity android:name=".RaceResultActivity" android:exported="false" />
+        <activity android:name=".RecordsActivity" android:exported="false" />
+        <!-- 训练模式：地图 + 轨迹 -->
+        <activity
+            android:name=".TrainingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 云端功能：我参加的赛事 / 成员管理 / 全员成绩 / 团队赛况 -->
+        <activity android:name=".JoinedListActivity" android:exported="false" />
+        <activity android:name=".MemberManageActivity" android:exported="false" />
+        <activity android:name=".MemberResultsActivity" android:exported="false" />
+        <activity android:name=".TeamResultsActivity" android:exported="false" />
+
+        <!-- 成绩导出文件分享 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
