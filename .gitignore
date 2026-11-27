@@ -1,0 +1,43 @@
+# ---------- Android / Gradle ----------
+*.iml
+.gradle/
+/local.properties
+/.idea/
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+release/
+*.hprof
+
+# ---------- Spring Boot ----------
+build/
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# ---------- 运行时数据（含真实成绩，不要上传） ----------
+*.mv.db
+*.trace.db
+ori-data*
+
+# ---------- 密钥与配置 ----------
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+local.properties
+
+# ---------- 系统 / 编辑器 ----------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/

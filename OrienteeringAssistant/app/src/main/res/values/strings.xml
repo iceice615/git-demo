@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">定向越野助手</string>
+
+    <string-array name="competition_modes">
+        <item>个人赛</item>
+        <item>团队赛</item>
+        <item>积分赛</item>
+        <item>接力赛</item>
+    </string-array>
+</resources>

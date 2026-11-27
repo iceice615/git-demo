@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2E6DF6</color>
+    <color name="primary_dark">#1B4FCC</color>
+    <color name="accent">#FF7A00</color>
+    <color name="bg">#F4F6F8</color>
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#667085</color>
+    <color name="success">#1E9E50</color>
+    <color name="error">#D92D20</color>
+    <color name="nav_active">#2E6DF6</color>
+    <color name="nav_inactive">#98A2B3</color>
+</resources>

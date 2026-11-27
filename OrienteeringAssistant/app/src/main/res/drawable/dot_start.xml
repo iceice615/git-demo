@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 轨迹起点圆点（绿色） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="22dp"
+        android:height="22dp" />
+    <solid android:color="#1E9E50" />
+    <stroke
+        android:width="3dp"
+        android:color="#FFFFFF" />
+</shape>
